@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basal-gateway
+  namespace: kube-system
+  annotations:
+    "sidecar.jaegertracing.io/inject": "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: basal-gateway
+  template:
+    metadata:
+      labels:
+        app: basal-gateway
+    spec:
+      containers:
+        - name: basal-gateway
+          image: uhub.service.ucloud.cn/entropypool/basal-gateway:latest
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: service-config
+              mountPath: /etc/BasalGateway
+          env:
+            - name: ENV_ENVIRONMENT_TARGET
+              valueFrom:
+                configMapKeyRef:
+                  name: system-environment
+                  key: environment.target
+            - name: ENV_CONSUL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: system-environment
+                  key: environment.consul_host
+            - name: ENV_CONSUL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: system-environment
+                  key: environment.consul_port
+            - name: ENV_CLUSTER_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+      volumes:
+        - name: service-config
+          configMap:
+            name: basal-gateway-config
+            items:
+              - key: service-conf
+                path: BasalGateway.viper.yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: basal-gateway
+  namespace: kube-system
+spec:
+  ports:
+    - name: http
+      port: 50640
+      targetPort: 50640
+    - name: grpc
+      port: 50641
+      targetPort: 50641
+    - name: healthz
+      port: 50642
+      targetPort: 50642
+    - name: prometheus
+      port: 50643
+      targetPort: 50643
+  selector:
+    app: basal-gateway

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: basal-gateway-config
+  namespace: kube-system
+data:
+  service-conf: |
+    config:
+      hostname: "basal-gateway.npool.top"
+      http_port: 50640
+      grpc_port: 50641
+      healthz_port: 50642
+      prometheus_port: 50643
+      appid: "89089012783789789719823798127398"
+      serviceid: "45616526-85a4-11ed-a6c4-1e0b0807e20c"
+      logdir: "./"
+      apolloAccessKey: "0147fb70b815403790e8634b899fac07"
