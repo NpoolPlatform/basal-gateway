@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/NpoolPlatform/basal-manager v0.0.0-20221227070732-25c79e8ef673
-	github.com/NpoolPlatform/basal-middleware v0.0.0-20221227071440-99cc83aac391
+	github.com/NpoolPlatform/basal-middleware v0.0.0-20221227073031-316d7057b7ed
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20221102072657-7fcc5e6f1012
 	github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5
 	github.com/NpoolPlatform/message v0.0.0-20221227070458-a0e3a5d5561d
