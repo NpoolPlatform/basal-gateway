@@ -3,11 +3,11 @@ module github.com/NpoolPlatform/basal-gateway
 go 1.17
 
 require (
-	github.com/NpoolPlatform/basal-manager v0.0.0-20221227051439-0c17261f2f54
-	github.com/NpoolPlatform/basal-middleware v0.0.0-20221227045111-6fd6d451883d
+	github.com/NpoolPlatform/basal-manager v0.0.0-20221227070732-25c79e8ef673
+	github.com/NpoolPlatform/basal-middleware v0.0.0-20221227071440-99cc83aac391
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20221102072657-7fcc5e6f1012
 	github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5
-	github.com/NpoolPlatform/message v0.0.0-20221227053738-4daaf4ce01ee
+	github.com/NpoolPlatform/message v0.0.0-20221227070458-a0e3a5d5561d
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.10.0
@@ -69,7 +69,6 @@ require (
 	github.com/spf13/viper v1.11.0 // indirect
 	github.com/streadway/amqp v1.0.0 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
-	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.31.0 // indirect
 	go.opentelemetry.io/otel v1.8.0 // indirect
 	go.opentelemetry.io/otel/exporters/jaeger v1.6.3 // indirect
