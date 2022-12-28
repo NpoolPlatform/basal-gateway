@@ -43,10 +43,10 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/toml v0.4.1 h1:GaI7EiDXDRfa8VshkTj7Fym7ha+y8/XxIgD2okUIjLw=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/DataDog/datadog-go v3.2.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
-github.com/NpoolPlatform/basal-manager v0.0.0-20221227070732-25c79e8ef673 h1:EGA8/FWHySNen0HJi90aCfpuhPTnB8LKj8esMAuY9i8=
-github.com/NpoolPlatform/basal-manager v0.0.0-20221227070732-25c79e8ef673/go.mod h1:lGgeqa4bniu8qX5pPKdbAEo9WvhFgJbtJzyZKYg+21w=
-github.com/NpoolPlatform/basal-middleware v0.0.0-20221227073031-316d7057b7ed h1:aIULKW9P7jnvwV/rouE8fy//PY8jqjCrfCqgDRfJ/LU=
-github.com/NpoolPlatform/basal-middleware v0.0.0-20221227073031-316d7057b7ed/go.mod h1:sPWB2e8SFiobF7vCVQNPxwlhrzmWT1h/LDl/SVQec6Q=
+github.com/NpoolPlatform/basal-manager v0.0.0-20221228012600-11bf139e32da h1:eD35//rMRA3memWTCatJJ97nHWVWbRywF23FqZP3jt0=
+github.com/NpoolPlatform/basal-manager v0.0.0-20221228012600-11bf139e32da/go.mod h1:lGgeqa4bniu8qX5pPKdbAEo9WvhFgJbtJzyZKYg+21w=
+github.com/NpoolPlatform/basal-middleware v0.0.0-20221228013048-951da3e0461c h1:W3EFJZAVasYnc+mqoUn4YjX5QQW+T+6kJh1ujJ2KAiQ=
+github.com/NpoolPlatform/basal-middleware v0.0.0-20221228013048-951da3e0461c/go.mod h1:2ve2qsnYtLc5YOuMUQDt3pzYUAokI9bWaK2fjJSNjmY=
 github.com/NpoolPlatform/go-service-framework v0.0.0-20221102072657-7fcc5e6f1012 h1:agWdYMDo1nBXR0w/PQz9Kze5IZsROOwSL8WcQFTMT4Q=
 github.com/NpoolPlatform/go-service-framework v0.0.0-20221102072657-7fcc5e6f1012/go.mod h1:/sor3E0i0XR8BaKInJwWC85aXLmbMFRNLdIuw+ed+ig=
 github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5 h1:JF3d0OshTe/tHBKflk2x71N83ZgwxNF+EjApSa6qm1M=
@@ -416,7 +416,8 @@ github.com/subosito/gotenv v1.2.0 h1:Slr1R9HxAlEKefgq5jn9U+DnETlIUa6HfgEzj0g5d7s
 github.com/subosito/gotenv v1.2.0/go.mod h1:N0PQaV/YGNqwC0u51sEeR/aUtSLEXKX9iv69rRypqCw=
 github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926/go.mod h1:9ESjWnEqriFuLhtthL60Sar/7RFoluCcXsuvEwTV5KM=
 github.com/ugorji/go v1.1.4/go.mod h1:uQMGLiO92mf5W77hV/PUCpI3pbzQx3CRekS0kk+RGrc=
-github.com/ugorji/go/codec v1.2.7 h1:YPXUKf7fYbp/y8xloBqZOw2qaVggbfwMlI8WM3wZUJ0=
+github.com/ugorji/go/codec v1.2.8 h1:sgBJS6COt0b/P40VouWKdseidkDgHxYGm0SAglUHfP0=
+github.com/ugorji/go/codec v1.2.8/go.mod h1:UNopzCgEMSXjBc6AOMqYvWC1ktqTAfzJZUZgYf6w6lg=
 github.com/urfave/cli/v2 v2.4.0 h1:m2pxjjDFgDxSPtO8WSdbndj17Wu2y8vOT86wE/tjr+I=
 github.com/urfave/cli/v2 v2.4.0/go.mod h1:NX9W0zmTvedE5oDoOMs2RTC8RvdK98NTYZE5LbaEYPg=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
