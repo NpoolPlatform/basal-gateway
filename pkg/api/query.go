@@ -11,20 +11,18 @@ import (
 )
 
 func (h *Handler) GetAPIs(ctx context.Context) (*npool.GetAPIsResponse, error) {
-	infos, total, err := cli.GetAPIs(ctx, &pb.Conds{
-		Exported: &basetypes.BoolVal{
-			Op:    cruder.EQ,
-			Value: *h.Exported,
-		},
-		Depracated: &basetypes.BoolVal{
-			Op:    cruder.EQ,
-			Value: *h.Deprecated,
-		},
-		ServiceName: &basetypes.StringVal{
-			Op:    cruder.EQ,
-			Value: *h.ServiceName,
-		},
-	}, h.Offset, h.Limit)
+	conds := &pb.Conds{}
+	if h.Deprecated != nil {
+		conds.Depracated = &basetypes.BoolVal{Op: cruder.EQ, Value: *h.Deprecated}
+	}
+	if h.Exported != nil {
+		conds.Exported = &basetypes.BoolVal{Op: cruder.EQ, Value: *h.Exported}
+	}
+	if h.ServiceName != nil {
+		conds.ServiceName = &basetypes.StringVal{Op: cruder.EQ, Value: *h.ServiceName}
+	}
+
+	infos, total, err := cli.GetAPIs(ctx, conds, h.Offset, h.Limit)
 	if err != nil {
 		return nil, err
 	}
