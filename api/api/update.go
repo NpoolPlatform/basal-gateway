@@ -20,7 +20,7 @@ func (s *Server) UpdateAPI(ctx context.Context, in *npool.UpdateAPIRequest) (*np
 	)
 	if err != nil {
 		logger.Sugar().Errorw(
-			"GetAPIs",
+			"UpdateAPI",
 			"In", in,
 			"Error", err,
 		)
@@ -30,7 +30,7 @@ func (s *Server) UpdateAPI(ctx context.Context, in *npool.UpdateAPIRequest) (*np
 	info, err := handler.UpdateAPI(ctx)
 	if err != nil {
 		logger.Sugar().Errorw(
-			"GetAPIs",
+			"UpdateAPI",
 			"In", in,
 			"Error", err,
 		)

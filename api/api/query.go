@@ -48,7 +48,7 @@ func (s *Server) GetDomains(ctx context.Context, in *npool.GetDomainsRequest) (*
 	handler, err := api1.NewHandler(ctx)
 	if err != nil {
 		logger.Sugar().Errorw(
-			"GetAPIs",
+			"GetDomains",
 			"In", in,
 			"Error", err,
 		)
