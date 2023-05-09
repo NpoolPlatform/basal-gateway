@@ -43,8 +43,8 @@ github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/DataDog/datadog-go v3.2.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
-github.com/NpoolPlatform/basal-middleware v0.0.0-20230509025356-ae5536701a0e h1:qhQau+8VJLz5LX8qkXt06nFHy5iZGeJRrFwDvfWxmvw=
-github.com/NpoolPlatform/basal-middleware v0.0.0-20230509025356-ae5536701a0e/go.mod h1:9XJEnZ0PxMH6QO4fw2ptQ8hePwN+cHgkYuJ4f5D7pvE=
+github.com/NpoolPlatform/basal-middleware v0.0.0-20230509032826-733bfb493729 h1:sPmxAUJPgLuLuu9k1jlY2LaYgfqGO8jUne3BtWz0o0s=
+github.com/NpoolPlatform/basal-middleware v0.0.0-20230509032826-733bfb493729/go.mod h1:9XJEnZ0PxMH6QO4fw2ptQ8hePwN+cHgkYuJ4f5D7pvE=
 github.com/NpoolPlatform/go-service-framework v0.0.0-20230412082654-0f8f9e7ae58d h1:LIzncKCI9pOcFubxViWu3tJoJNa79zGzGaZu88+ZdKU=
 github.com/NpoolPlatform/go-service-framework v0.0.0-20230412082654-0f8f9e7ae58d/go.mod h1:Kh7DMkWnYOMHxEKq7QfJqbxm1HaUPkhTNN74lfHQxyE=
 github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5 h1:JF3d0OshTe/tHBKflk2x71N83ZgwxNF+EjApSa6qm1M=
