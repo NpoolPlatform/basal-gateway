@@ -10,7 +10,7 @@ import (
 )
 
 type Handler struct {
-	ID          *uuid.UUID
+	ID          *string
 	Protocol    *npool.Protocol
 	ServiceName *string
 	Method      *npool.Method
@@ -36,11 +36,11 @@ func NewHandler(ctx context.Context, options ...func(context.Context, *Handler) 
 
 func WithID(id *string) func(context.Context, *Handler) error {
 	return func(ctx context.Context, h *Handler) error {
-		_id, err := uuid.Parse(*id)
+		_, err := uuid.Parse(*id)
 		if err != nil {
 			return err
 		}
-		h.ID = &_id
+		h.ID = id
 		return nil
 	}
 }

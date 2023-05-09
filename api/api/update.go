@@ -9,30 +9,33 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	mgrcli "github.com/NpoolPlatform/basal-middleware/pkg/client/api"
+	api1 "github.com/NpoolPlatform/basal-gateway/pkg/api"
 	npool "github.com/NpoolPlatform/message/npool/basal/gw/v1/api"
-	mgrpb "github.com/NpoolPlatform/message/npool/basal/mw/v1/api"
-
-	"github.com/google/uuid"
 )
 
 func (s *Server) UpdateAPI(ctx context.Context, in *npool.UpdateAPIRequest) (*npool.UpdateAPIResponse, error) {
-	var err error
-
-	if _, err := uuid.Parse(in.GetID()); err != nil {
+	handler, err := api1.NewHandler(ctx,
+		api1.WithID(&in.ID),
+		api1.WithDeprecated(in.Depracated),
+	)
+	if err != nil {
+		logger.Sugar().Errorw(
+			"GetAPIs",
+			"In", in,
+			"Error", err,
+		)
 		return &npool.UpdateAPIResponse{}, status.Error(codes.InvalidArgument, err.Error())
 	}
 
-	info, err := mgrcli.UpdateAPI(ctx, &mgrpb.APIReq{
-		ID:         &in.ID,
-		Depracated: in.Depracated,
-	})
+	info, err := handler.UpdateAPI(ctx)
 	if err != nil {
-		logger.Sugar().Errorf("fail update api: %v", err.Error())
-		return &npool.UpdateAPIResponse{}, status.Error(codes.Internal, err.Error())
+		logger.Sugar().Errorw(
+			"GetAPIs",
+			"In", in,
+			"Error", err,
+		)
+		return &npool.UpdateAPIResponse{}, status.Error(codes.InvalidArgument, err.Error())
 	}
 
-	return &npool.UpdateAPIResponse{
-		Info: info,
-	}, nil
+	return info, nil
 }
