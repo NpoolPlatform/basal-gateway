@@ -3,10 +3,10 @@ module github.com/NpoolPlatform/basal-gateway
 go 1.17
 
 require (
-	github.com/NpoolPlatform/basal-middleware v0.0.0-20230517031907-698d9be1b51c
+	github.com/NpoolPlatform/basal-middleware v0.0.0-20230517042359-cf290be1d5e9
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20230509081417-267df92cab6d
 	github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5
-	github.com/NpoolPlatform/message v0.0.0-20230516081738-d173f7edb91e
+	github.com/NpoolPlatform/message v0.0.0-20230517035708-47983ef2390a
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/google/uuid v1.3.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.10.0
