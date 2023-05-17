@@ -3,7 +3,7 @@ module github.com/NpoolPlatform/basal-gateway
 go 1.17
 
 require (
-	github.com/NpoolPlatform/basal-middleware v0.0.0-20230516145402-2acdca04dfe1
+	github.com/NpoolPlatform/basal-middleware v0.0.0-20230517015424-a8d3c27cb388
 	github.com/NpoolPlatform/go-service-framework v0.0.0-20230509081417-267df92cab6d
 	github.com/NpoolPlatform/libent-cruder v0.0.0-20220621110548-8f3f8049ecc5
 	github.com/NpoolPlatform/message v0.0.0-20230516081738-d173f7edb91e
