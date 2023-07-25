@@ -21,11 +21,13 @@ spec:
     - host: api.npool.top
       http: &http_rules
         paths:
-          - path: /api/basal-gateway
+          - path: /api/basal
             backend:
               serviceName: basal-gateway
               servicePort: 50640
-    - host: api.procyon.vip
-      http: *http_rules
     - host: api.xpool.top
+      http: *http_rules
+    - host: api.development.npool.top
+      http: *http_rules
+    - host: api.jh-testing.npool.top
       http: *http_rules
