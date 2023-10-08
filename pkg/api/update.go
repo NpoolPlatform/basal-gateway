@@ -11,7 +11,7 @@ import (
 func (h *Handler) UpdateAPI(ctx context.Context) (*npool.UpdateAPIResponse, error) {
 	info, err := cli.UpdateAPI(ctx, &pb.APIReq{
 		ID:         h.ID,
-		Depracated: h.Deprecated,
+		Deprecated: h.Deprecated,
 	})
 	if err != nil {
 		return nil, err
