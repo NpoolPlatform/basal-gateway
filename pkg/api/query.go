@@ -13,7 +13,7 @@ import (
 func (h *Handler) GetAPIs(ctx context.Context) (*npool.GetAPIsResponse, error) {
 	conds := &pb.Conds{}
 	if h.Deprecated != nil {
-		conds.Depracated = &basetypes.BoolVal{Op: cruder.EQ, Value: *h.Deprecated}
+		conds.Deprecated = &basetypes.BoolVal{Op: cruder.EQ, Value: *h.Deprecated}
 	}
 	if h.Exported != nil {
 		conds.Exported = &basetypes.BoolVal{Op: cruder.EQ, Value: *h.Exported}

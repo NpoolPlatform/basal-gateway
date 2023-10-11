@@ -6,11 +6,10 @@ import (
 
 	constant "github.com/NpoolPlatform/basal-middleware/pkg/const"
 	npool "github.com/NpoolPlatform/message/npool/basal/mw/v1/api"
-	"github.com/google/uuid"
 )
 
 type Handler struct {
-	ID          *string
+	ID          *uint32
 	Protocol    *npool.Protocol
 	ServiceName *string
 	Method      *npool.Method
@@ -34,20 +33,25 @@ func NewHandler(ctx context.Context, options ...func(context.Context, *Handler) 
 	return handler, nil
 }
 
-func WithID(id *string) func(context.Context, *Handler) error {
+func WithID(id *uint32, must bool) func(context.Context, *Handler) error {
 	return func(ctx context.Context, h *Handler) error {
-		_, err := uuid.Parse(*id)
-		if err != nil {
-			return err
+		if id == nil {
+			if must {
+				return fmt.Errorf("invalid id")
+			}
+			return nil
 		}
 		h.ID = id
 		return nil
 	}
 }
 
-func WithServiceName(name *string) func(context.Context, *Handler) error {
+func WithServiceName(name *string, must bool) func(context.Context, *Handler) error {
 	return func(ctx context.Context, h *Handler) error {
 		if name == nil {
+			if must {
+				return fmt.Errorf("invalid servicename")
+			}
 			return nil
 		}
 		const leastNameLen = 2
@@ -60,9 +64,12 @@ func WithServiceName(name *string) func(context.Context, *Handler) error {
 	}
 }
 
-func WithExported(exported *bool) func(context.Context, *Handler) error {
+func WithExported(exported *bool, must bool) func(context.Context, *Handler) error {
 	return func(ctx context.Context, h *Handler) error {
 		if exported == nil {
+			if must {
+				return fmt.Errorf("invalid exported")
+			}
 			return nil
 		}
 		h.Exported = exported
@@ -70,9 +77,12 @@ func WithExported(exported *bool) func(context.Context, *Handler) error {
 	}
 }
 
-func WithDeprecated(deprecated *bool) func(context.Context, *Handler) error {
+func WithDeprecated(deprecated *bool, must bool) func(context.Context, *Handler) error {
 	return func(ctx context.Context, h *Handler) error {
 		if deprecated == nil {
+			if must {
+				return fmt.Errorf("invalid deprecated")
+			}
 			return nil
 		}
 		h.Deprecated = deprecated

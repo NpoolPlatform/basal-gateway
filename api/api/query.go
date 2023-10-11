@@ -18,9 +18,9 @@ func (s *Server) GetAPIs(ctx context.Context, in *npool.GetAPIsRequest) (*npool.
 	handler, err := api1.NewHandler(ctx,
 		api1.WithOffset(in.GetOffset()),
 		api1.WithLimit(in.GetLimit()),
-		api1.WithExported(in.Exported),
-		api1.WithDeprecated(in.Depracated),
-		api1.WithServiceName(in.ServiceName),
+		api1.WithExported(in.Exported, false),
+		api1.WithDeprecated(in.Depracated, false),
+		api1.WithServiceName(in.ServiceName, false),
 	)
 	if err != nil {
 		logger.Sugar().Errorw(

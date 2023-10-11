@@ -15,8 +15,8 @@ import (
 
 func (s *Server) UpdateAPI(ctx context.Context, in *npool.UpdateAPIRequest) (*npool.UpdateAPIResponse, error) {
 	handler, err := api1.NewHandler(ctx,
-		api1.WithID(&in.ID),
-		api1.WithDeprecated(in.Depracated),
+		api1.WithID(&in.ID, true),
+		api1.WithDeprecated(in.Depracated, false),
 	)
 	if err != nil {
 		logger.Sugar().Errorw(
