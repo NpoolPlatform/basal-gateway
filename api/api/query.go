@@ -19,7 +19,7 @@ func (s *Server) GetAPIs(ctx context.Context, in *npool.GetAPIsRequest) (*npool.
 		api1.WithOffset(in.GetOffset()),
 		api1.WithLimit(in.GetLimit()),
 		api1.WithExported(in.Exported, false),
-		api1.WithDeprecated(in.Depracated, false),
+		api1.WithDeprecated(in.Deprecated, false),
 		api1.WithServiceName(in.ServiceName, false),
 	)
 	if err != nil {
